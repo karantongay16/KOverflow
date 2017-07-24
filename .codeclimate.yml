@@ -1,4 +1,2 @@
-JavaScript: false
-Ruby: true
-Python: false
-PHP: false
+exclude_paths:
+  "/app/assets"
