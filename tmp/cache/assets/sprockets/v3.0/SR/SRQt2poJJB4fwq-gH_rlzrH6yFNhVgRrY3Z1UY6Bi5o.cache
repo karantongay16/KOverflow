@@ -1,0 +1,39 @@
+I"©(function() {
+  var extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    hasProp = {}.hasOwnProperty;
+
+  Komysql.Models.Askquestion = (function(superClass) {
+    extend(Askquestion, superClass);
+
+    function Askquestion() {
+      return Askquestion.__super__.constructor.apply(this, arguments);
+    }
+
+    Askquestion.prototype.paramRoot = 'askquestion';
+
+    Askquestion.prototype.defaults = {
+      title: null,
+      description: null
+    };
+
+    return Askquestion;
+
+  })(Backbone.Model);
+
+  Komysql.Collections.AskquestionsCollection = (function(superClass) {
+    extend(AskquestionsCollection, superClass);
+
+    function AskquestionsCollection() {
+      return AskquestionsCollection.__super__.constructor.apply(this, arguments);
+    }
+
+    AskquestionsCollection.prototype.model = Komysql.Models.Askquestion;
+
+    AskquestionsCollection.prototype.url = '/askquestions';
+
+    return AskquestionsCollection;
+
+  })(Backbone.Collection);
+
+}).call(this);
+:ET

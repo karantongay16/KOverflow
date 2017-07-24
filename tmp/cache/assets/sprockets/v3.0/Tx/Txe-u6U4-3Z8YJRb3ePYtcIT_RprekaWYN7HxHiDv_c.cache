@@ -1,0 +1,12 @@
+I"¡(function() {
+  window.Komysql = {
+    Models: {},
+    Collections: {},
+    Views: {},
+    Routers: {}
+  };
+
+  $(document).ready(function() {});
+
+}).call(this);
+:ET

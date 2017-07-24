@@ -1,0 +1,1793 @@
+---
+:stats:
+  :codeLOC: 8737
+  :testLOC: 210
+  :code_to_test_ratio: 0.0
+  :lines:
+  - :name: Controllers
+    :lines: 298
+    :loc: 239
+    :classes: 7
+    :methods: 31
+    :methods_per_class: 4
+    :loc_per_method: 5
+  - :name: Helpers
+    :lines: 13
+    :loc: 12
+    :classes: 0
+    :methods: 1
+    :methods_per_class: 0
+    :loc_per_method: 10
+  - :name: Models
+    :lines: 60
+    :loc: 44
+    :classes: 6
+    :methods: 2
+    :methods_per_class: 0
+    :loc_per_method: 20
+  - :name: Mailers
+    :lines: 4
+    :loc: 4
+    :classes: 1
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Javascripts
+    :lines: 15842
+    :loc: 8403
+    :classes: 2
+    :methods: 788
+    :methods_per_class: 394
+    :loc_per_method: 8
+  - :name: Libraries
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Controller tests
+    :lines: 39
+    :loc: 23
+    :classes: 5
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Helper tests
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Model tests
+    :lines: 28
+    :loc: 12
+    :classes: 4
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Mailer tests
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Integration tests
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Controllers specs
+    :lines: 179
+    :loc: 153
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Models specs
+    :lines: 71
+    :loc: 53
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Helpers specs
+    :lines: 15
+    :loc: 4
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Total
+    :lines: 16549
+    :loc: 8947
+    :classes: 25
+    :methods: 822
+    :methods_per_class: 32
+    :loc_per_method: 8
+:rails_best_practices:
+  :total:
+  - Found 0 errors.
+  :problems: []
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: QuestionsController
+      :complexity: 24
+      :lines: 76
+      :methods:
+      - :name: QuestionsController#destroy
+        :complexity: 4
+        :lines: 11
+      - :name: QuestionsController#create
+        :complexity: 4
+        :lines: 11
+      - :name: QuestionsController#index
+        :complexity: 4
+        :lines: 12
+      - :name: QuestionsController#show
+        :complexity: 3
+        :lines: 7
+      - :name: QuestionsController#senduser
+        :complexity: 3
+        :lines: 5
+      - :name: QuestionsController#update
+        :complexity: 2
+        :lines: 7
+      - :name: QuestionsController#edit
+        :complexity: 2
+        :lines: 6
+      - :name: QuestionsController#question_params
+        :complexity: 1
+        :lines: 2
+      - :name: QuestionsController#new
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/questions_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: AppController
+      :complexity: 24
+      :lines: 90
+      :methods:
+      - :name: AppController#followunfollow
+        :complexity: 6
+        :lines: 19
+      - :name: AppController#listofusers
+        :complexity: 4
+        :lines: 7
+      - :name: AppController#answers
+        :complexity: 4
+        :lines: 12
+      - :name: AppController#questions
+        :complexity: 3
+        :lines: 8
+      - :name: AppController#follows
+        :complexity: 3
+        :lines: 8
+      - :name: AppController#user
+        :complexity: 3
+        :lines: 8
+      - :name: AppController#index
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/app_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: AnswersController
+      :complexity: 10
+      :lines: 44
+      :methods:
+      - :name: AnswersController#create
+        :complexity: 3
+        :lines: 11
+      - :name: AnswersController#index
+        :complexity: 3
+        :lines: 10
+      - :name: AnswersController#destroy
+        :complexity: 2
+        :lines: 11
+      - :name: AnswersController#answer_params
+        :complexity: 1
+        :lines: 2
+      - :name: AnswersController#show
+        :complexity: 1
+        :lines: 1
+    :filename: app/controllers/answers_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: ProfilesController
+      :complexity: 7
+      :lines: 34
+      :methods:
+      - :name: ProfilesController#index
+        :complexity: 3
+        :lines: 9
+      - :name: ProfilesController#create
+        :complexity: 2
+        :lines: 7
+      - :name: ProfilesController#profile_params
+        :complexity: 1
+        :lines: 2
+      - :name: ProfilesController#show
+        :complexity: 1
+        :lines: 6
+    :filename: app/controllers/profiles_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: ApplicationHelper
+      :complexity: 5
+      :lines: 11
+      :methods:
+      - :name: ApplicationHelper#flash_class
+        :complexity: 5
+        :lines: 9
+    :filename: app/helpers/application_helper.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: User
+      :complexity: 4
+      :lines: 25
+      :methods:
+      - :name: User#self.follower_hash
+        :complexity: 4
+        :lines: 9
+    :filename: app/models/user.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: UsersController
+      :complexity: 4
+      :lines: 17
+      :methods:
+      - :name: UsersController#unfollow
+        :complexity: 1
+        :lines: 3
+      - :name: UsersController#follow
+        :complexity: 1
+        :lines: 3
+      - :name: UsersController#show
+        :complexity: 1
+        :lines: 2
+      - :name: UsersController#index
+        :complexity: 1
+        :lines: 3
+    :filename: app/controllers/users_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: ApplicationController
+      :complexity: 2
+      :lines: 16
+      :methods:
+      - :name: ApplicationController#layout_by_resource
+        :complexity: 2
+        :lines: 6
+    :filename: app/controllers/application_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/registrations/edit.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/shared/_links.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 41
+      :methods: []
+    - :class_name: Toggle
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: 'Toggle::'
+      :complexity: 0
+      :lines: 8
+      :methods: []
+    - :class_name: 'Toggle::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: 'Toggle::::::'
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: 'Toggle::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: 'Toggle::::::::::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Toggle::::::::::::KyuOverflow
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: 'Toggle::::::::::::KyuOverflow::'
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: 'Toggle::::::::::::KyuOverflow::::'
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    - :class_name: 'Toggle::::::::::::KyuOverflow::::::'
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    - :class_name: Toggle::::::::::::KyuOverflow::::::::Bootstrap
+      :complexity: 0
+      :lines: 18
+      :methods: []
+    :filename: app/views/welcome/index.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/questions/search.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 4
+      :methods: []
+    :filename: app/views/questions/index.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/layouts/formlayout.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: "::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::::KyuOverflow"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::::KyuOverflow::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::::KyuOverflow::::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::::KyuOverflow::::::Question"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::::KyuOverflow::::::Question::Ask"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::::KyuOverflow::::::Question::Ask::My"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::::::::KyuOverflow::::::Question::Ask::My::View"
+      :complexity: 1
+      :lines: 2
+      :methods: []
+    :filename: app/views/layouts/application.html.erb
+  - :classes:
+    - :class_name: List
+      :complexity: 1
+      :lines: 3
+      :methods: []
+    :filename: app/views/users/index.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Question
+      :complexity: 1
+      :lines: 10
+      :methods:
+      - :name: Question#self.search
+        :complexity: 1
+        :lines: 3
+    :filename: app/models/question.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: WelcomeController
+      :complexity: 1
+      :lines: 4
+      :methods:
+      - :name: WelcomeController#index
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/welcome_controller.rb
+  - :classes:
+    - :class_name: ApplicationCable
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: ApplicationCable::Channel
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/channels/application_cable/channel.rb
+  - :classes:
+    - :class_name: ApplicationCable
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    - :class_name: ApplicationCable::Connection
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/channels/application_cable/connection.rb
+  - :classes:
+    - :class_name: ApplicationMailer
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    :filename: app/mailers/application_mailer.rb
+  - :classes:
+    - :class_name: ApplicationJob
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/jobs/application_job.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/devise/passwords/edit.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/views/devise/sessions/new.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 7
+      :methods: []
+    :filename: app/views/answers/_form.html.erb
+  - :classes:
+    - :class_name: Answer
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    :filename: app/views/answers/_answer.html.erb
+  - :classes:
+    - :class_name: Edit
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/questions/edit.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Asked
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Asked::Description
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: Asked::Description::Edit
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    :filename: app/views/questions/show.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/questions/_form.html.erb
+  - :classes:
+    - :class_name: Post
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/views/questions/new.html.erb
+  - :classes:
+    - :class_name: User
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: User::Followers
+      :complexity: 0
+      :lines: 12
+      :methods: []
+    :filename: app/views/profiles/show.html.erb
+  - :classes:
+    - :class_name: My
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: My::Following
+      :complexity: 0
+      :lines: 7
+      :methods: []
+    :filename: app/views/profiles/index.html.erb
+  - :classes:
+    - :class_name: ApplicationRecord
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/models/application_record.rb
+  - :classes:
+    - :class_name: Answer
+      :complexity: 0
+      :lines: 4
+      :methods: []
+    :filename: app/models/answer.rb
+  - :classes:
+    - :class_name: Follow
+      :complexity: 0
+      :lines: 9
+      :methods: []
+    :filename: app/models/follow.rb
+  - :classes:
+    - :class_name: Profile
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/models/profile.rb
+  :classes:
+  - :name: AppController
+    :complexity: 24
+    :lines: 90
+    :defs:
+    - :name: AppController#index
+      :complexity: 1
+      :lines: 2
+    - :name: AppController#user
+      :complexity: 3
+      :lines: 8
+    - :name: AppController#follows
+      :complexity: 3
+      :lines: 8
+    - :name: AppController#questions
+      :complexity: 3
+      :lines: 8
+    - :name: AppController#answers
+      :complexity: 4
+      :lines: 12
+    - :name: AppController#listofusers
+      :complexity: 4
+      :lines: 7
+    - :name: AppController#followunfollow
+      :complexity: 6
+      :lines: 19
+  - :name: QuestionsController
+    :complexity: 24
+    :lines: 76
+    :defs:
+    - :name: QuestionsController#new
+      :complexity: 1
+      :lines: 2
+    - :name: QuestionsController#senduser
+      :complexity: 3
+      :lines: 5
+    - :name: QuestionsController#edit
+      :complexity: 2
+      :lines: 6
+    - :name: QuestionsController#index
+      :complexity: 4
+      :lines: 12
+    - :name: QuestionsController#show
+      :complexity: 3
+      :lines: 7
+    - :name: QuestionsController#create
+      :complexity: 4
+      :lines: 11
+    - :name: QuestionsController#update
+      :complexity: 2
+      :lines: 7
+    - :name: QuestionsController#destroy
+      :complexity: 4
+      :lines: 11
+    - :name: QuestionsController#question_params
+      :complexity: 1
+      :lines: 2
+  - :name: AnswersController
+    :complexity: 10
+    :lines: 44
+    :defs:
+    - :name: AnswersController#show
+      :complexity: 1
+      :lines: 1
+    - :name: AnswersController#index
+      :complexity: 3
+      :lines: 10
+    - :name: AnswersController#create
+      :complexity: 3
+      :lines: 11
+    - :name: AnswersController#destroy
+      :complexity: 2
+      :lines: 11
+    - :name: AnswersController#answer_params
+      :complexity: 1
+      :lines: 2
+  - :name: ProfilesController
+    :complexity: 7
+    :lines: 34
+    :defs:
+    - :name: ProfilesController#index
+      :complexity: 3
+      :lines: 9
+    - :name: ProfilesController#create
+      :complexity: 2
+      :lines: 7
+    - :name: ProfilesController#show
+      :complexity: 1
+      :lines: 6
+    - :name: ProfilesController#profile_params
+      :complexity: 1
+      :lines: 2
+  - :name: ApplicationHelper
+    :complexity: 5
+    :lines: 11
+    :defs:
+    - :name: ApplicationHelper#flash_class
+      :complexity: 5
+      :lines: 9
+  - :name: UsersController
+    :complexity: 4
+    :lines: 17
+    :defs:
+    - :name: UsersController#index
+      :complexity: 1
+      :lines: 3
+    - :name: UsersController#show
+      :complexity: 1
+      :lines: 2
+    - :name: UsersController#follow
+      :complexity: 1
+      :lines: 3
+    - :name: UsersController#unfollow
+      :complexity: 1
+      :lines: 3
+  - :name: User
+    :complexity: 4
+    :lines: 25
+    :defs:
+    - :name: User#self.follower_hash
+      :complexity: 4
+      :lines: 9
+  - :name: ApplicationController
+    :complexity: 2
+    :lines: 16
+    :defs:
+    - :name: ApplicationController#layout_by_resource
+      :complexity: 2
+      :lines: 6
+  - :name: WelcomeController
+    :complexity: 1
+    :lines: 4
+    :defs:
+    - :name: WelcomeController#index
+      :complexity: 1
+      :lines: 2
+  - :name: Question
+    :complexity: 1
+    :lines: 10
+    :defs:
+    - :name: Question#self.search
+      :complexity: 1
+      :lines: 3
+  - :name: List
+    :complexity: 1
+    :lines: 3
+  - :name: "::::::::::KyuOverflow::::::Question::Ask::My::View"
+    :complexity: 1
+    :lines: 2
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: ''
+    :complexity: 1
+    :lines: 4
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: ''
+    :complexity: 1
+    :lines: 41
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: Profile
+    :complexity: 0
+    :lines: 2
+  - :name: Follow
+    :complexity: 0
+    :lines: 9
+  - :name: Answer
+    :complexity: 0
+    :lines: 4
+  - :name: ApplicationRecord
+    :complexity: 0
+    :lines: 2
+  - :name: My::Following
+    :complexity: 0
+    :lines: 7
+  - :name: My
+    :complexity: 0
+    :lines: 1
+  - :name: User::Followers
+    :complexity: 0
+    :lines: 12
+  - :name: User
+    :complexity: 0
+    :lines: 1
+  - :name: Post
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: Asked::Description::Edit
+    :complexity: 0
+    :lines: 4
+  - :name: Asked::Description
+    :complexity: 0
+    :lines: 3
+  - :name: Asked
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: Edit
+    :complexity: 0
+    :lines: 0
+  - :name: Answer
+    :complexity: 0
+    :lines: 4
+  - :name: ''
+    :complexity: 0
+    :lines: 7
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: ApplicationJob
+    :complexity: 0
+    :lines: 1
+  - :name: ApplicationMailer
+    :complexity: 0
+    :lines: 3
+  - :name: ApplicationCable::Connection
+    :complexity: 0
+    :lines: 1
+  - :name: ApplicationCable
+    :complexity: 0
+    :lines: 2
+  - :name: ApplicationCable::Channel
+    :complexity: 0
+    :lines: 1
+  - :name: ApplicationCable
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::::::KyuOverflow::::::Question::Ask::My"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::::::KyuOverflow::::::Question::Ask"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::::::KyuOverflow::::::Question"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::::::KyuOverflow::::"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::::::KyuOverflow::"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::::::KyuOverflow"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::::"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::::"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::"
+    :complexity: 0
+    :lines: 1
+  - :name: "::"
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: Toggle::::::::::::KyuOverflow::::::::Bootstrap
+    :complexity: 0
+    :lines: 18
+  - :name: 'Toggle::::::::::::KyuOverflow::::::'
+    :complexity: 0
+    :lines: 0
+  - :name: 'Toggle::::::::::::KyuOverflow::::'
+    :complexity: 0
+    :lines: 4
+  - :name: 'Toggle::::::::::::KyuOverflow::'
+    :complexity: 0
+    :lines: 1
+  - :name: Toggle::::::::::::KyuOverflow
+    :complexity: 0
+    :lines: 2
+  - :name: 'Toggle::::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: 'Toggle::::::::'
+    :complexity: 0
+    :lines: 1
+  - :name: 'Toggle::::::'
+    :complexity: 0
+    :lines: 2
+  - :name: 'Toggle::::'
+    :complexity: 0
+    :lines: 1
+  - :name: 'Toggle::'
+    :complexity: 0
+    :lines: 8
+  - :name: Toggle
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  :methods:
+  - :name: AppController#followunfollow
+    :complexity: 6
+    :lines: 19
+  - :name: ApplicationHelper#flash_class
+    :complexity: 5
+    :lines: 9
+  - :name: User#self.follower_hash
+    :complexity: 4
+    :lines: 9
+  - :name: AppController#listofusers
+    :complexity: 4
+    :lines: 7
+  - :name: AppController#answers
+    :complexity: 4
+    :lines: 12
+  - :name: QuestionsController#destroy
+    :complexity: 4
+    :lines: 11
+  - :name: QuestionsController#create
+    :complexity: 4
+    :lines: 11
+  - :name: QuestionsController#index
+    :complexity: 4
+    :lines: 12
+  - :name: ProfilesController#index
+    :complexity: 3
+    :lines: 9
+  - :name: AnswersController#create
+    :complexity: 3
+    :lines: 11
+  - :name: AnswersController#index
+    :complexity: 3
+    :lines: 10
+  - :name: AppController#questions
+    :complexity: 3
+    :lines: 8
+  - :name: AppController#follows
+    :complexity: 3
+    :lines: 8
+  - :name: AppController#user
+    :complexity: 3
+    :lines: 8
+  - :name: QuestionsController#show
+    :complexity: 3
+    :lines: 7
+  - :name: QuestionsController#senduser
+    :complexity: 3
+    :lines: 5
+  - :name: ApplicationController#layout_by_resource
+    :complexity: 2
+    :lines: 6
+  - :name: ProfilesController#create
+    :complexity: 2
+    :lines: 7
+  - :name: AnswersController#destroy
+    :complexity: 2
+    :lines: 11
+  - :name: QuestionsController#update
+    :complexity: 2
+    :lines: 7
+  - :name: QuestionsController#edit
+    :complexity: 2
+    :lines: 6
+  - :name: WelcomeController#index
+    :complexity: 1
+    :lines: 2
+  - :name: Question#self.search
+    :complexity: 1
+    :lines: 3
+  - :name: UsersController#unfollow
+    :complexity: 1
+    :lines: 3
+  - :name: UsersController#follow
+    :complexity: 1
+    :lines: 3
+  - :name: UsersController#show
+    :complexity: 1
+    :lines: 2
+  - :name: UsersController#index
+    :complexity: 1
+    :lines: 3
+  - :name: ProfilesController#profile_params
+    :complexity: 1
+    :lines: 2
+  - :name: ProfilesController#show
+    :complexity: 1
+    :lines: 6
+  - :name: AnswersController#answer_params
+    :complexity: 1
+    :lines: 2
+  - :name: AnswersController#show
+    :complexity: 1
+    :lines: 1
+  - :name: AppController#index
+    :complexity: 1
+    :lines: 2
+  - :name: QuestionsController#question_params
+    :complexity: 1
+    :lines: 2
+  - :name: QuestionsController#new
+    :complexity: 1
+    :lines: 2
+:churn:
+  :changes: []
+  :class_churn:
+  - klass: &1
+      file: app/controllers/answers_controller.rb
+      klass: AnswersController
+    times_changed: 1
+  - klass: &2
+      file: app/controllers/application_controller.rb
+      klass: ApplicationController
+    times_changed: 1
+  - klass: &3
+      file: app/controllers/profiles_controller.rb
+      klass: ProfilesController
+    times_changed: 1
+  - klass: &4
+      file: app/controllers/questions_controller.rb
+      klass: QuestionsController
+    times_changed: 1
+  - klass: &5
+      file: app/controllers/users_controller.rb
+      klass: UsersController
+    times_changed: 1
+  :method_churn:
+  - method: &6
+      file: app/controllers/answers_controller.rb
+      klass: AnswersController
+      method: AnswersController#show
+    times_changed: 1
+  - method: &7
+      file: app/controllers/answers_controller.rb
+      klass: AnswersController
+      method: AnswersController#index
+    times_changed: 1
+  - method: &8
+      file: app/controllers/answers_controller.rb
+      klass: AnswersController
+      method: AnswersController#create
+    times_changed: 1
+  - method: &9
+      file: app/controllers/answers_controller.rb
+      klass: AnswersController
+      method: AnswersController#destroy
+    times_changed: 1
+  - method: &10
+      file: app/controllers/profiles_controller.rb
+      klass: ProfilesController
+      method: ProfilesController#index
+    times_changed: 1
+  - method: &11
+      file: app/controllers/profiles_controller.rb
+      klass: ProfilesController
+      method: ProfilesController#show
+    times_changed: 1
+  - method: &12
+      file: app/controllers/profiles_controller.rb
+      klass: ProfilesController
+      method: ProfilesController#profile_params
+    times_changed: 1
+  - method: &13
+      file: app/controllers/questions_controller.rb
+      klass: QuestionsController
+      method: QuestionsController#new
+    times_changed: 1
+  - method: &14
+      file: app/controllers/questions_controller.rb
+      klass: QuestionsController
+      method: QuestionsController#senduser
+    times_changed: 1
+  - method: &15
+      file: app/controllers/questions_controller.rb
+      klass: QuestionsController
+      method: QuestionsController#index
+    times_changed: 1
+  - method: &16
+      file: app/controllers/questions_controller.rb
+      klass: QuestionsController
+      method: QuestionsController#show
+    times_changed: 1
+  - method: &17
+      file: app/controllers/questions_controller.rb
+      klass: QuestionsController
+      method: QuestionsController#create
+    times_changed: 1
+  - method: &18
+      file: app/controllers/questions_controller.rb
+      klass: QuestionsController
+      method: QuestionsController#destroy
+    times_changed: 1
+  - method: &19
+      file: app/controllers/users_controller.rb
+      klass: UsersController
+      method: UsersController#follow
+    times_changed: 1
+  - method: &20
+      file: app/controllers/users_controller.rb
+      klass: UsersController
+      method: UsersController#unfollow
+    times_changed: 1
+  :changed_files:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - app/assets/javascripts/app.coffee
+  - app/assets/javascripts/application.js
+  - app/assets/javascripts/backbone-min.js
+  - app/assets/javascripts/backbone.modal.js
+  - app/assets/javascripts/backbone/komysql.js.coffee
+  - app/assets/javascripts/backbonemodals/backbone.modal.js
+  - app/assets/javascripts/komysql.js.coffee
+  - app/assets/javascripts/light-bootstrap-dashboard.js
+  - app/assets/javascripts/main1.js
+  - app/assets/javascripts/models/askquestion.js
+  - app/assets/javascripts/models/askquestion.js.coffee
+  - app/assets/javascripts/underscore-min.js
+  - app/assets/javascripts/views/askquestionview.js
+  - app/assets/light-bootstrap-dashboard.js
+  - app/assets/main.js
+  - app/assets/stylesheets/app.scss
+  - "app/assets/stylesheets/backbonemodals/Untitled Document\t"
+  - app/assets/stylesheets/backbonemodals/backbone.modal.css
+  - app/assets/stylesheets/backbonemodals/backbone.modal.theme.css
+  - app/controllers/answers_controller.rb
+  - app/controllers/app_controller.rb
+  - app/controllers/application_controller.rb
+  - app/controllers/profiles_controller.rb
+  - app/controllers/questions_controller.rb
+  - app/controllers/users_controller.rb
+  - app/helpers/app_helper.rb
+  - app/views/layouts/application.html.erb
+  - app/views/profiles/sendfollowingcount.html.erb
+  - app/views/questions/index.html.erb
+  - app/views/questions/new.html.erb
+  - app/views/questions/test.html
+  - app/views/welcome/index.html.erb
+  - config/initializers/assets.rb
+  - config/routes.rb
+  - spec/controllers/app_controller_spec.rb
+  - spec/helpers/app_helper_spec.rb
+  :changed_classes:
+  - *1
+  - *2
+  - *3
+  - *4
+  - *5
+  :changed_methods:
+  - *6
+  - *7
+  - *8
+  - *9
+  - *10
+  - *11
+  - *12
+  - *13
+  - *14
+  - *15
+  - *16
+  - *17
+  - *18
+  - *19
+  - *20
+:flay:
+  :total_score: '170'
+  :matches:
+  - :reason: 1) Similar code found in :attrasgn (mass = 130)
+    :matches:
+    - :name: app/views/devise/passwords/new.html.erb
+      :line: '3'
+    - :name: app/views/devise/unlocks/new.html.erb
+      :line: '3'
+  - :reason: 2) Similar code found in :if (mass = 40)
+    :matches:
+    - :name: app/views/devise/shared/_links.html.erb
+      :line: '6'
+    - :name: app/views/devise/shared/_links.html.erb
+      :line: '15'
+:roodi:
+  :total:
+  - Found 0 errors.
+  :problems: []
+:cane:
+  :total_violations: 1
+  :violations:
+    :abc_complexity:
+    - :file: app/controllers/profiles_controller.rb
+      :method: ProfilesController#index
+      :complexity: '16'
+:hotspots:
+  files:
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/helpers/application_helper.rb
+      file_name: app/helpers/application_helper.rb
+      line_number: 
+      hash_key: '["app/helpers/application_helper.rb", nil, nil]'
+    details:
+      saikuro: complexity is 5.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/user.rb
+      file_name: app/models/user.rb
+      line_number: 
+      hash_key: '["app/models/user.rb", nil, nil]'
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", nil, nil]'
+    details:
+      saikuro: average complexity is 3.4
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", nil, nil]'
+    details:
+      saikuro: average complexity is 2.7
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/answers_controller.rb
+      file_name: app/controllers/answers_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/answers_controller.rb", nil, nil]'
+    details:
+      saikuro: average complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb
+      file_name: app/controllers/application_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/application_controller.rb", nil, nil]'
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/profiles_controller.rb
+      file_name: app/controllers/profiles_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/profiles_controller.rb", nil, nil]'
+    details:
+      saikuro: average complexity is 1.8
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/users_controller.rb
+      file_name: app/controllers/users_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users_controller.rb", nil, nil]'
+    details:
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/question.rb
+      file_name: app/models/question.rb
+      line_number: 
+      hash_key: '["app/models/question.rb", nil, nil]'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/welcome_controller.rb
+      file_name: app/controllers/welcome_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/welcome_controller.rb", nil, nil]'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/devise/passwords/new.html.erb
+      file_name: app/views/devise/passwords/new.html.erb
+      line_number: 
+      hash_key: '["app/views/devise/passwords/new.html.erb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/devise/unlocks/new.html.erb
+      file_name: app/views/devise/unlocks/new.html.erb
+      line_number: 
+      hash_key: '["app/views/devise/unlocks/new.html.erb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/devise/shared/_links.html.erb
+      file_name: app/views/devise/shared/_links.html.erb
+      line_number: 
+      hash_key: '["app/views/devise/shared/_links.html.erb", nil, nil]'
+    details:
+      flay: found 1 code duplications
+  classes:
+  - location:
+      class_name: ApplicationHelper
+      method_name: 
+      file_path: app/helpers/application_helper.rb
+      file_name: app/helpers/application_helper.rb
+      line_number: 
+      hash_key: '["app/helpers/application_helper.rb", "ApplicationHelper", nil]'
+    details:
+      saikuro: complexity is 5.0
+  - location:
+      class_name: User
+      method_name: 
+      file_path: app/models/user.rb
+      file_name: app/models/user.rb
+      line_number: 
+      hash_key: '["app/models/user.rb", "User", nil]'
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: AppController
+      method_name: 
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", nil]'
+    details:
+      saikuro: average complexity is 3.4
+  - location:
+      class_name: QuestionsController
+      method_name: 
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        nil]'
+    details:
+      saikuro: average complexity is 2.7
+  - location:
+      class_name: AnswersController
+      method_name: 
+      file_path: app/controllers/answers_controller.rb
+      file_name: app/controllers/answers_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/answers_controller.rb", "AnswersController", nil]'
+    details:
+      saikuro: average complexity is 2.0
+  - location:
+      class_name: ApplicationController
+      method_name: 
+      file_path: app/controllers/application_controller.rb
+      file_name: app/controllers/application_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/application_controller.rb", "ApplicationController",
+        nil]'
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: ProfilesController
+      method_name: 
+      file_path: app/controllers/profiles_controller.rb
+      file_name: app/controllers/profiles_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/profiles_controller.rb", "ProfilesController",
+        nil]'
+    details:
+      saikuro: average complexity is 1.8
+  - location:
+      class_name: UsersController
+      method_name: 
+      file_path: app/controllers/users_controller.rb
+      file_name: app/controllers/users_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users_controller.rb", "UsersController", nil]'
+    details:
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: Question
+      method_name: 
+      file_path: app/models/question.rb
+      file_name: app/models/question.rb
+      line_number: 
+      hash_key: '["app/models/question.rb", "Question", nil]'
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: WelcomeController
+      method_name: 
+      file_path: app/controllers/welcome_controller.rb
+      file_name: app/controllers/welcome_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/welcome_controller.rb", "WelcomeController", nil]'
+    details:
+      saikuro: complexity is 1.0
+  methods:
+  - location:
+      class_name: AppController
+      method_name: AppController#followunfollow
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", "AppController#followunfollow"]'
+      simple_method_name: "#followunfollow"
+    details:
+      saikuro: complexity is 6.0
+  - location:
+      class_name: ApplicationHelper
+      method_name: ApplicationHelper#flash_class
+      file_path: app/helpers/application_helper.rb
+      file_name: app/helpers/application_helper.rb
+      line_number: 
+      hash_key: '["app/helpers/application_helper.rb", "ApplicationHelper", "ApplicationHelper#flash_class"]'
+      simple_method_name: "#flash_class"
+    details:
+      saikuro: complexity is 5.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#destroy
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#destroy"]'
+      simple_method_name: "#destroy"
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#create
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#create"]'
+      simple_method_name: "#create"
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#index
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#index"]'
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: AppController
+      method_name: AppController#listofusers
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", "AppController#listofusers"]'
+      simple_method_name: "#listofusers"
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: AppController
+      method_name: AppController#answers
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", "AppController#answers"]'
+      simple_method_name: "#answers"
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: User
+      method_name: User#self.follower_hash
+      file_path: app/models/user.rb
+      file_name: app/models/user.rb
+      line_number: 
+      hash_key: '["app/models/user.rb", "User", "User#self.follower_hash"]'
+      simple_method_name: "#self.follower_hash"
+    details:
+      saikuro: complexity is 4.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#show
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#show"]'
+      simple_method_name: "#show"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#senduser
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#senduser"]'
+      simple_method_name: "#senduser"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: AppController
+      method_name: AppController#questions
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", "AppController#questions"]'
+      simple_method_name: "#questions"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: AppController
+      method_name: AppController#follows
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", "AppController#follows"]'
+      simple_method_name: "#follows"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: AppController
+      method_name: AppController#user
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", "AppController#user"]'
+      simple_method_name: "#user"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: AnswersController
+      method_name: AnswersController#create
+      file_path: app/controllers/answers_controller.rb
+      file_name: app/controllers/answers_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/answers_controller.rb", "AnswersController", "AnswersController#create"]'
+      simple_method_name: "#create"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: AnswersController
+      method_name: AnswersController#index
+      file_path: app/controllers/answers_controller.rb
+      file_name: app/controllers/answers_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/answers_controller.rb", "AnswersController", "AnswersController#index"]'
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: ProfilesController
+      method_name: ProfilesController#index
+      file_path: app/controllers/profiles_controller.rb
+      file_name: app/controllers/profiles_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/profiles_controller.rb", "ProfilesController",
+        "ProfilesController#index"]'
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 3.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#update
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#update"]'
+      simple_method_name: "#update"
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#edit
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#edit"]'
+      simple_method_name: "#edit"
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: AnswersController
+      method_name: AnswersController#destroy
+      file_path: app/controllers/answers_controller.rb
+      file_name: app/controllers/answers_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/answers_controller.rb", "AnswersController", "AnswersController#destroy"]'
+      simple_method_name: "#destroy"
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: ProfilesController
+      method_name: ProfilesController#create
+      file_path: app/controllers/profiles_controller.rb
+      file_name: app/controllers/profiles_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/profiles_controller.rb", "ProfilesController",
+        "ProfilesController#create"]'
+      simple_method_name: "#create"
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#layout_by_resource
+      file_path: app/controllers/application_controller.rb
+      file_name: app/controllers/application_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/application_controller.rb", "ApplicationController",
+        "ApplicationController#layout_by_resource"]'
+      simple_method_name: "#layout_by_resource"
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#question_params
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#question_params"]'
+      simple_method_name: "#question_params"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: QuestionsController
+      method_name: QuestionsController#new
+      file_path: app/controllers/questions_controller.rb
+      file_name: app/controllers/questions_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/questions_controller.rb", "QuestionsController",
+        "QuestionsController#new"]'
+      simple_method_name: "#new"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: AppController
+      method_name: AppController#index
+      file_path: app/controllers/app_controller.rb
+      file_name: app/controllers/app_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/app_controller.rb", "AppController", "AppController#index"]'
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: AnswersController
+      method_name: AnswersController#answer_params
+      file_path: app/controllers/answers_controller.rb
+      file_name: app/controllers/answers_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/answers_controller.rb", "AnswersController", "AnswersController#answer_params"]'
+      simple_method_name: "#answer_params"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: AnswersController
+      method_name: AnswersController#show
+      file_path: app/controllers/answers_controller.rb
+      file_name: app/controllers/answers_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/answers_controller.rb", "AnswersController", "AnswersController#show"]'
+      simple_method_name: "#show"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ProfilesController
+      method_name: ProfilesController#profile_params
+      file_path: app/controllers/profiles_controller.rb
+      file_name: app/controllers/profiles_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/profiles_controller.rb", "ProfilesController",
+        "ProfilesController#profile_params"]'
+      simple_method_name: "#profile_params"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ProfilesController
+      method_name: ProfilesController#show
+      file_path: app/controllers/profiles_controller.rb
+      file_name: app/controllers/profiles_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/profiles_controller.rb", "ProfilesController",
+        "ProfilesController#show"]'
+      simple_method_name: "#show"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: UsersController
+      method_name: UsersController#unfollow
+      file_path: app/controllers/users_controller.rb
+      file_name: app/controllers/users_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users_controller.rb", "UsersController", "UsersController#unfollow"]'
+      simple_method_name: "#unfollow"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: UsersController
+      method_name: UsersController#follow
+      file_path: app/controllers/users_controller.rb
+      file_name: app/controllers/users_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users_controller.rb", "UsersController", "UsersController#follow"]'
+      simple_method_name: "#follow"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: UsersController
+      method_name: UsersController#show
+      file_path: app/controllers/users_controller.rb
+      file_name: app/controllers/users_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users_controller.rb", "UsersController", "UsersController#show"]'
+      simple_method_name: "#show"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: UsersController
+      method_name: UsersController#index
+      file_path: app/controllers/users_controller.rb
+      file_name: app/controllers/users_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/users_controller.rb", "UsersController", "UsersController#index"]'
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Question
+      method_name: Question#self.search
+      file_path: app/models/question.rb
+      file_name: app/models/question.rb
+      line_number: 
+      hash_key: '["app/models/question.rb", "Question", "Question#self.search"]'
+      simple_method_name: "#self.search"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: WelcomeController
+      method_name: WelcomeController#index
+      file_path: app/controllers/welcome_controller.rb
+      file_name: app/controllers/welcome_controller.rb
+      line_number: 
+      hash_key: '["app/controllers/welcome_controller.rb", "WelcomeController", "WelcomeController#index"]'
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 1.0
