@@ -68,7 +68,7 @@ border: 1px solid rgba(100, 100, 100, .4);
 overflow: visible;
 position: absolute;
 top: 49px;
-margin-left: -29  0px;
+margin-left: -290px;
 width: 400px;
 z-index: -1;
 display: none;
@@ -161,7 +161,7 @@ font-size: 11px;
       <ul class="navbar-right">
       <li id="notify_li">
             <span id="msg_count"></span>
-            <n id="notifylink"><img src="assets/notify.png" width=50 height=50></n>
+            <n id="notifylink"><%= image_tag("notify.png", :alt => "rss feed", :width => 50) %></n>
             <div id="notificationContainer">
             <div id="notificationTitle">Notifications</div>
             <div id="notificationsBody" class="notifications">
