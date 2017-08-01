@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170721123349) do
+ActiveRecord::Schema.define(version: 20170728095557) do
 
   create_table "answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "poster"
@@ -41,6 +41,14 @@ ActiveRecord::Schema.define(version: 20170721123349) do
     t.index ["follower_type", "follower_id"], name: "index_follows_on_follower_type_and_follower_id"
   end
 
+  create_table "notifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "contents"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
   create_table "paintings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -55,7 +63,7 @@ ActiveRecord::Schema.define(version: 20170721123349) do
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "title"
-    t.string "contents"
+    t.text "contents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "askedby"
@@ -79,4 +87,5 @@ ActiveRecord::Schema.define(version: 20170721123349) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "notifications", "users"
 end

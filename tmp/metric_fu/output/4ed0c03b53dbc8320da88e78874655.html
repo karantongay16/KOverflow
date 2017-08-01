@@ -227,7 +227,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n13" name="n13">13</a></span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n13" name="n13">13</a></span>  
 </pre></div>
 </div>
 
@@ -243,7 +243,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n14" name="n14">14</a></span>  acts_as_follower
+  <div class="code"><pre><span class="line-numbers"><a href="#n14" name="n14">14</a></span>  has_many <span class="symbol">:notifications</span>
 </pre></div>
 </div>
 
@@ -259,7 +259,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n15" name="n15">15</a></span>  acts_as_followable
+  <div class="code"><pre><span class="line-numbers"><a href="#n15" name="n15">15</a></span>
 </pre></div>
 </div>
 
@@ -275,7 +275,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n16" name="n16">16</a></span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n16" name="n16">16</a></span>  acts_as_follower
 </pre></div>
 </div>
 
@@ -291,7 +291,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n17" name="n17">17</a></span>  <span class="keyword">def</span> <span class="predefined-constant">self</span>.<span class="function">follower_hash</span> current_user
+  <div class="code"><pre><span class="line-numbers"><a href="#n17" name="n17">17</a></span>  acts_as_followable
 </pre></div>
 </div>
 
@@ -307,7 +307,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n18" name="n18">18</a></span>    <span class="constant">User</span>.select(<span class="string"><span class="delimiter">'</span><span class="content">email</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">id</span><span class="delimiter">'</span></span>).collect <span class="keyword">do</span> |user|
+  <div class="code"><pre><span class="line-numbers"><a href="#n18" name="n18">18</a></span>
 </pre></div>
 </div>
 
@@ -323,7 +323,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n19" name="n19">19</a></span>    <span class="keyword">if</span> current_user.id != user.id
+  <div class="code"><pre><span class="line-numbers"><a href="#n19" name="n19">19</a></span>  <span class="keyword">def</span> <span class="predefined-constant">self</span>.<span class="function">follower_hash</span> current_user
 </pre></div>
 </div>
 
@@ -339,7 +339,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>      user_hash = { <span class="key">id</span>: user.id, <span class="key">email</span>: user.email }
+  <div class="code"><pre><span class="line-numbers"><strong><a href="#n20" name="n20">20</a></strong></span>    <span class="constant">User</span>.select(<span class="string"><span class="delimiter">'</span><span class="content">email</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">id</span><span class="delimiter">'</span></span>).collect <span class="keyword">do</span> |user|
 </pre></div>
 </div>
 
@@ -355,7 +355,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n21" name="n21">21</a></span>      user_hash[<span class="symbol">:follow</span>] = current_user.following?(user) ? <span class="string"><span class="delimiter">&quot;</span><span class="content">Unfollow</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">Follow</span><span class="delimiter">&quot;</span></span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n21" name="n21">21</a></span>    <span class="keyword">if</span> current_user.id != user.id
 </pre></div>
 </div>
 
@@ -371,7 +371,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n22" name="n22">22</a></span>      user_hashs
+  <div class="code"><pre><span class="line-numbers"><a href="#n22" name="n22">22</a></span>      user_hash = { <span class="key">id</span>: user.id, <span class="key">email</span>: user.email }
 </pre></div>
 </div>
 
@@ -387,7 +387,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n23" name="n23">23</a></span>    <span class="keyword">end</span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n23" name="n23">23</a></span>      user_hash[<span class="symbol">:follow</span>] = current_user.following?(user) ? <span class="string"><span class="delimiter">&quot;</span><span class="content">Unfollow</span><span class="delimiter">&quot;</span></span> : <span class="string"><span class="delimiter">&quot;</span><span class="content">Follow</span><span class="delimiter">&quot;</span></span>
 </pre></div>
 </div>
 
@@ -403,7 +403,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n24" name="n24">24</a></span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n24" name="n24">24</a></span>      user_hash
 </pre></div>
 </div>
 
@@ -435,7 +435,7 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n26" name="n26">26</a></span>  <span class="keyword">end</span>
+  <div class="code"><pre><span class="line-numbers"><a href="#n26" name="n26">26</a></span>
 </pre></div>
 </div>
 
@@ -451,7 +451,39 @@
           </td>
           <td valign='top'>
             <div class="CodeRay">
-  <div class="code"><pre><span class="line-numbers"><a href="#n27" name="n27">27</a></span><span class="keyword">end</span></pre></div>
+  <div class="code"><pre><span class="line-numbers"><a href="#n27" name="n27">27</a></span>    <span class="keyword">end</span>
+</pre></div>
+</div>
+
+          </td>
+         </tr>
+         
+        
+        <tr>
+          <td valign='top'>
+           
+              &nbsp;
+          
+          </td>
+          <td valign='top'>
+            <div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n28" name="n28">28</a></span>  <span class="keyword">end</span>
+</pre></div>
+</div>
+
+          </td>
+         </tr>
+         
+        
+        <tr>
+          <td valign='top'>
+           
+              &nbsp;
+          
+          </td>
+          <td valign='top'>
+            <div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n29" name="n29">29</a></span><span class="keyword">end</span></pre></div>
 </div>
 
           </td>

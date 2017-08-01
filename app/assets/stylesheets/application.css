@@ -12,4 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require datatable.bootstrap.min
+ *= require bootstrap.min
  */

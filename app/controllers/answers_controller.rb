@@ -15,10 +15,21 @@ class AnswersController < ApplicationController
     end
 
   end
+  def ncreate(question)
+     print(question)
+     @notification = current_user.notifications.create(contents: "New Answer Created")
+  end
   def create
 
    @question = Question.find(params[:question_id])
    @answer = @question.answers.create(answer_params)
+
+   #ncreate(@question) # Update in the notifications model
+   @user = User.where(:email => @question.askedby)
+   @notification = @user.notifications.create(contents: "New Answer submitted for " + @question.title)
+
+   #@notification.save()
+
    #redirect_to question_path(@question)
 
    respond_to do |format|

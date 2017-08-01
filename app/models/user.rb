@@ -10,6 +10,8 @@ class User < ApplicationRecord
 
   has_many :relationships, :foreign_key => "follower_id",
                        :dependent => :destroy
+  
+  has_many :notifications
 
   acts_as_follower
   acts_as_followable

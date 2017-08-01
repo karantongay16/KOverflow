@@ -32,7 +32,7 @@ end
 
 def questions
 
-  @question = Question.where(askedby: current_user.email)
+  @question = Question.anscounthash(current_user)
   respond_to do |format|
   format.html # index.html.erb
   format.json { render :json => [@question] }
@@ -42,11 +42,12 @@ end
 
 def answers
 
-  ans = []
-  @answer = Answer.where(answeredby: current_user.email)
-  @answer.each do |a|
-    ans.push(Question.find(a.question_id))
-  end
+  @answer = Answer.answershash(current_user);
+  # ans = []
+  # @answer = Answer.where(answeredby: current_user.email)
+  # @answer.each do |a|
+  #   ans.push(Question.find(a.question_id))
+  # end
   respond_to do |format|
   format.html # index.html.erb
   format.json { render :json => @answer }

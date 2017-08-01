@@ -1,0 +1,36 @@
+var QuestionView = Marionette.CollectionView.extend({
+	tagName: "tr",
+
+	className: "question", //->
+
+	events: {
+		"click .delete": "onDelete",
+		"click .view" : "onView"
+	},
+	initialize: function(){
+		this.template = _.template($('#questionTemplate').html());
+		this.$el.html(this.template(this.model.toJSON()));
+		this.$el.attr("data-color", this.model.get("color"));
+
+	},
+
+	render: function() {
+		
+		this.$el.append("<td>" + this.model.get("title") +"</td>");
+		this.$el.append("<td>" + this.model.get("askedby") +"</td>");
+		this.$el.append("<td><button class='view btn btn-success' id=" + this.model.get("id") + ">View</button></td>");
+
+		return this;
+	},
+
+	onDelete: function(){
+		this.remove();
+	},
+
+	onView: function(){
+		//routing.router.flash({id: this.model.get("id")}).navigate('qview', {trigger: true});
+		router.navigate("/qview/" + this.model.get("id"),true);
+		//window.location = "/app/#qview/" + this.model.get("id");
+	},
+	
+});

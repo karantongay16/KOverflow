@@ -32,7 +32,15 @@ end
 
   match '/api/app/users/follow', to: 'users#follow', via: 'get'
 
+  match '/api/questions/edit/:id', to: 'questions#edit', via: 'get'
+
+  match '/api/questions/:id', to: 'questions#update', via: 'post'
+
   match '/questions/:id/answers', to: 'answers#create', via: 'post'
+
+  match '/notify/send', to: 'notifications#notify', via: 'get'
+
+  match '/notify/remove', to: 'notifications#remove', via: 'delete'
 
 
 
@@ -41,6 +49,7 @@ end
       get '/' => 'questions#index'
       post '/' => 'questions#create'
       delete '/' => 'questions#destroy'
+      patch '/' => 'questions#update'
       scope '/senduser' do
         get '/'  => 'questions#senduser'
       end

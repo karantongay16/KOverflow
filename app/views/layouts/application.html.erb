@@ -8,13 +8,14 @@
       /*background-image: url('intro-bg.jpg');*/
 
     }
-      footer {
-   position:relative;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   background:#999;
+
+    #footer {
+   background:#ffab62;
+  width:100%;
+  height:100px;
+  position:absolute;
+  bottom:0;
+  left:0;
 }
 .table-fixed{
   width: 100%;
@@ -47,7 +48,79 @@ a
 {
   cursor: pointer;
 }
+n
+{
+  float:left;
+  cursor: pointer;
+  position: relative;
+}
+.js div#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #fff url('http://files.mimoymima.com/images/loading.gif') no-repeat center center; }
+
+
+/* CSS used here will be applied after bootstrap.css */
+
+
+#notify_li{position:relative}
+#notificationContainer {
+background-color: #fff;
+border: 1px solid rgba(100, 100, 100, .4);
+-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+overflow: visible;
+position: absolute;
+top: 49px;
+margin-left: -29  0px;
+width: 400px;
+z-index: -1;
+display: none;
+}
+#notificationContainer:before {
+content: '';
+display: block;
+position: absolute;
+width: 0;
+height: 0;
+color: transparent;
+border: 10px solid black;
+border-color: transparent transparent white;
+margin-top: -20px;
+margin-left: 285px;
+}
+#notificationTitle {
+z-index: 1000;
+font-weight: bold;
+padding: 8px;
+font-size: 13px;
+background-color: #ffffff;
+width: 384px;
+border-bottom: 1px solid #dddddd;
+}
+#notificationsBody {
+padding: 2px 0px 0px 0px !important;
+min-height:300px;
+}
+#notificationFooter {
+background-color: #e9eaed;
+text-align: center;
+font-weight: bold;
+padding: 8px;
+font-size: 12px;
+border-top: 1px solid #dddddd;
+}
+#msg_count {
+padding: 1px 5px 1px 5px;
+background: #cc0000;
+color: #ffffff;
+font-weight: bold;
+margin-left: 0px;
+border-radius: 50px;
+position: relative;
+margin-top: 1px;
+font-size: 11px;
+}
+
+
     </style>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>KyuOverflow</title>
@@ -59,9 +132,14 @@ a
     <%= javascript_include_tag 'jquery' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
+    <script data-main="main1" src="require.js"></script>
 
   </head>
+  <div class="js">
   <body>
+   <div id="preloader"></div>
+
 <div class="navbar navbar-light navbar-fixed-top" style="background-color: #00CCFF;">
   <div class="container">
     <div class="navbar-header">
@@ -80,9 +158,28 @@ a
         <li><a data-url="/users" class="nav-item navbar-nav">View All Users</a></li>
         <li><%= link_to('Log out', destroy_user_session_path, method: :delete) %></li>
       </ul>
+      <ul class="navbar-right">
+      <li id="notify_li">
+            <span id="msg_count"></span>
+            <n id="notifylink"><img src="assets/notify.png" width=50 height=50></n>
+            <div id="notificationContainer">
+            <div id="notificationTitle">Notifications</div>
+            <div id="notificationsBody" class="notifications">
+            <div class="content"></div>
+            
+            </div>
+            <div id="notificationFooter"><a href="#">See All</a></div>
+            </div>
+
+        </li>
+        
+    </ul>
     </div><!--/.nav-collapse -->
   </div>
 </div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 
 <div class="container">
 <% flash.each do |key, value| %>
@@ -91,17 +188,16 @@ a
       </div>
 <% end %>
    <%= yield %>
-  <br><br>
   <h2 class='h2 viewheader'></h2>
-  <br><br>
 
-<div id="cont">
+
+<div id="cont" class="content">
 
 </div>
 
 <script id="questionTemplate" type="text/template">
 
- </script>
+</script>
 
 </div><!-- /.container -->
 
@@ -122,6 +218,49 @@ a
     </div>
   </script>
 
+  <script type="text/template" id="delete-modal-template">
+    <div class="bbm-modal__topbar">
+      <h3 class="bbm-modal__title"></h3>
+    </div>
+    <div class="bbm-modal__section">
+
+    </div>
+    <div class="bbm-modal__bottombar">
+      <a href="#" class="bbm-button" id="delete">Confirm!</a>
+      <a href="#" class="bbm-button">Close</a>
+    </div>
+  </script>
+
+<div class="clearfix"></div>
+
+
+</div>
+
+
+
+   <script type="text/javascript" >
+   $(document).ready(function()
+   {
+   $("#notifylink").click(function()    // onclick function for notification
+   {
+   $("#notificationContainer").fadeToggle(300);   // show notification div
+   //$("#msg_count").fadeOut("slow");
+   return false;
+   });
+
+   //Document Click
+   $(document).click(function()
+   {
+   $("#notificationContainer").hide();     // hide notification div
+   });
+   //Popup Click
+   $("#notificationContainer").click(function()
+   {
+   return false
+   });
+
+   });
+   </script>
 
   </body>
 </html>

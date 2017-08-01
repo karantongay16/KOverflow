@@ -1,0 +1,7 @@
+var QuesCollection = Backbone.Collection.extend({
+    id: '',
+    model: QuesDesc,  
+    url: function () {
+        return '/app/#qview/' + this.id;
+    }
+});

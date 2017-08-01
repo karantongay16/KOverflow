@@ -18,6 +18,12 @@ class QuestionsController < ApplicationController
     if @question.askedby != current_user.email
       flash[:info] = "You cannot edit the question asked by other user!"
       redirect_back(fallback_location: root_path)
+    else
+      respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => [@question] }
+      end
+
     end
   end
   def index
@@ -28,11 +34,12 @@ class QuestionsController < ApplicationController
     else
       @posts = nil
     end
-    respond_to do |format|
-    format.html # index.html.erb
-    format.json { render :json => [@questions] }
-    end
+      respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => [@questions] }
+      end
   end
+
   def show
     @question = Question.find(params[:id])
 
@@ -56,11 +63,17 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     if @question.update(question_params)
-      redirect_to @question
+      #redirect_to @question
+        respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => [@question] }
+        end
+
     else
       render 'edit'
     end
   end
+
   def destroy
     @question = Question.find(params[:id])
     if @question.askedby != current_user.email

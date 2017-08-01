@@ -1,0 +1,248 @@
+var QuesDescView = Marionette.CollectionView.extend({
+
+// Contents for displaying the question description goes here
+
+events: {
+"click #delete_question" : "deleteQues",
+"click #submitanswer" : "submitAns",
+"click .deleteAns" : "deleteAnswer"
+},
+
+submitAns: function(){
+
+	if ($("#anscontents").val().length < 5)
+	{
+		modalOpen();
+		$(".bbm-modal__title").html("Information!");
+		$(".bbm-modal__section").html("Answer Should be Minimum of 5 Characters");
+		return;
+	}
+	nqm = new AnsModel({poster: $("#email").val(), contents: $("#anscontents").val(), answeredby: "" + $("#email").val()});
+		console.log(nqm);	
+		console.log("Attempting to save");
+		nqm.save({},
+			{
+			url: "/questions/" + quesid + "/answers"
+			},
+			{
+				dataType: 'text'
+			},
+			{
+				success: function()
+				{
+					console.log("Model Saved");
+				},
+				error: function(model,xhr,options)
+				{
+					console.log("Somthing Went Wrong");
+				}
+			});
+		//router.viewQuesDesc(new QuesDescView({id: quesid}));
+		//router.navigate("#qview/" + quesid,true);
+		//router.viewQuesDesc(quesid);
+		//router.navigate(new QuesDescView({quesid}));
+		myController.loadView(new QuesDescView(quesid));
+		//console.log("refreshed");
+		
+        	// this.QuesDescView().remove();
+        
+		
+		//$("#cont").html(viewQuesDesc().show().$el);
+		//this.show();
+
+},
+
+deleteAnswer: function(e){
+
+	console.log("Deleting");
+	var ele = $(e.currentTarget);
+	//console.log(ele.attr('id'));
+	ques = new AnsModel({id: ele.attr('id')});
+	$(".bbm-modal__title").html("Alert");
+	ques.destroy({
+		url: "/questions/" + quesid + "/answers" + "/" + ele.attr('id'),
+		success: function () {
+		    console.log("success");
+		    modalOpen();
+		  	$(".bbm-modal__title").html("Success!");
+
+		  	$(".bbm-modal__section").html("Your answer deleted successfully!");
+
+		  },
+		  error: function(e){
+		  	//alert("You cannot delete someone else's answer!");
+
+		  	modalOpen();
+		  	$(".bbm-modal__title").html("Information");
+
+		  	$(".bbm-modal__section").html("You cannot delete the answer submitted by another User!");
+
+		  	//$('.open').click();
+		  }});
+
+	if (this._currentView) {
+			this._currentView.remove();
+		}
+	//router.loadView(new QuesDescView({quesid}));
+	myController.loadView(new QuesDescView(quesid));
+},
+
+initialize: function (options) {
+		
+        this.ques = new QuesCollection();
+        this.ques.id = options.quesid;
+        this.ques.fetch();
+        quesid = this.ques.id;	
+
+        this.$el.empty();
+
+        this.show(quesid);
+    },
+
+deleteQues: function()
+{
+	console.log("Deleting");
+	ques = new QuesDesc({id: quesid});
+	//_.invoke(this.ques, 'destroy');
+	//q = new QuesDesc();
+	ques.destroy({
+		url: "/questions/" + quesid,
+		dataType: 'json',
+		success: function () {
+		   
+		   alert("Your Question deleted successfully!");
+		   //  modalOpen();
+		  	// $(".bbm-modal__title").html("Success!");
+
+		  	// $(".bbm-modal__section").html("Your Question deleted successfully!");
+
+		    router.navigate("#qfeed");
+			//Backbone.history.loadUrl();
+			window.location.reload();
+		  },
+		  error: function(e){
+		  	//alert("You cannot delete someone else's question!")
+		  	modalOpen();
+		  	$(".bbm-modal__title").html("Information");
+
+		  	$(".bbm-modal__section").html("You cannot delete the Question submitted by another User!");
+
+		  }});
+	//router.navigate("#qfeed",true);
+	
+	//this.remove();
+	//return false;
+},
+
+show: function(quesid){
+	$(".viewheader").html("");
+	this.ques = new QuesCollection();
+	var q = new Question();
+		var item1 = [];
+		$.ajax({
+		  url: '/questions/' + quesid,
+		  dataType: 'json',
+		  async: false,
+		  success: function (data) {
+		    //questions = new Question.Collections.Questions(data[0]);
+		    //var m = new Question(data, {parse: true});
+		    for (var i=0; i<data.length; i++)
+		    {
+		    	item1 = data[i];
+		    	//console.log(item1.askedby);
+		    		
+		    }
+		  } });
+
+		this.$el.append("<h2 class='h2'>Question: " + item1.title + "</h2>");
+		this.$el.append("Asked By: " + item1.askedby);
+		this.$el.append(" | Created On: " + item1.created_at + "<br><br>");
+
+		this.$el.append("" +
+			"<div class='desc' style='background-color:lightcyan; box-shadow: 5px 7px 5px #888888; height:30%; border-radius:15px; padding: 25px;'>");
+
+		var str = item1.contents;
+
+		//str = str.replace(/(?:\r\n|\r|\n)/g, '<br />');
+
+		this.$(".desc").append("<u>Description:</u> <br><br>" + str +"");
+		
+		this.$el.append("<div id='formbtn'></div>");
+
+		//this.$("#formbtn").append("<br><a class='btn btn-warning' id='edit_question' rel='nofollow'>Edit This Question</a>");
+
+		this.$("#formbtn").append("<br><a class='btn btn-danger' id='delete_question' rel='nofollow'>Delete This Question</a>");
+
+		this.$el.append("<br><div class='answer' style='background-color:lightblue; height:320px; padding:25px; border-radius:25px;'>");
+
+		$.ajax({
+		  url: '/api/questions/senduser',
+		  dataType: 'json',
+		  async: false,
+		  success: function (data) {
+		    useremail = data;
+		    
+		  },
+		  error: function(e){
+		  	console.log("Error");
+		  } });
+
+
+		this.$(".answer").append("<label>Poster</label><br>" +
+			"<input type='text' value=" + useremail + " id='email' class='form-control' readonly='true'><br>" + 
+			"<label>Your Answer</label><br>" +
+			"<textarea class='form-control' id='anscontents'></textarea><br>" +
+			"<button class='btn btn-success' id='submitanswer'>Submit Answer</button>");
+
+
+		var answers = [];
+		var answeredby = [];
+		var answereddate = [];
+		var answerid = [];
+
+		$.ajax({
+		  url: '/questions/' + quesid +'/answers',
+		  dataType: 'json',
+		  async: false,
+		  success: function (data) {
+		  	//console.log(data[0]);
+		    for(var i=0;i<data[0].length;i++)
+		    {
+		    	answers[i] = data[0][i].contents;
+		    	answeredby[i] = data[0][i].answeredby;
+		    	answereddate[i] = data[0][i].created_at;
+		    	answerid[i] = data[0][i].id;
+		    }
+		    
+		  },
+		  error: function(e){
+		  	console.log("Error");
+		  } });
+
+
+		for(var i=0;i<answers.length;i++)
+		{
+		 this.$el.append("<br><br>" +
+		    	"<div class='answer' style='background-color:lightblue; height:220px; padding:20px; border-radius:25px;'>" +
+  				   "<p>" +
+				    "<strong>Answer: </strong>" +
+				    "" + answers[i] +
+				  "</p>" +
+				  "<br><br>" +
+				  "<p>" +
+				    "<strong>Poster: </strong>" +
+				    "" + answeredby[i] +" | <strong>Answered: </strong>" + answereddate[i] +
+				  "</p>" +
+				 
+				  "<p>" +
+				  "<br>" +
+				  "<button class='btn btn-danger deleteAns' id='" + answerid[i] + "'>Delete Answer</button>" +
+				"</p>" +
+				"</div>" + 
+		    	"");
+		}
+
+		return this;
+	}
+
+});
